@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary_font: "Inter", sans-serif;
+  --primary_color: #e6533c;
+  --white: #ffffff;
+  --black: #000000;
+}
+
+/* common css */
+.width {
+  max-width: 1060px;
+  margin: 0 auto;
+}
+
+.btn {
+  padding: 16px 40px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  border-radius: 42px;
+  color: var(--white);
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* main style */
+body {
+  background-color: var(--black);
+  color: var(--white);
+  font-family: var(--primary_font);
+  padding: 5px;
+}
+
+header {
+  background: linear-gradient(to top, #000000, #77777750);
+}
+
+.header-container nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 57px;
+}
+
+.header-container nav h2 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  font-style: italic;
+  color: var(--primary_color);
+}
+
+.header-container nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 47px;
+  padding: 4px;
+  border: 1px solid #ffffff30;
+  border-radius: 39px;
+}
+
+.header-container nav ul li a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.header-container nav ul li:first-child {
+  background-color: var(--primary_color);
+  padding: 8px 20px;
+  border-radius: 46px;
+}
+
+.header-container .bar-icon {
+  display: none;
+}
+
+/* banner related style */
+#banner {
+  margin-top: 33px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#banner .banner-content {
+  max-width: 508px;
+}
+
+#banner .banner-content h1 {
+  font-size: 4.8rem;
+  margin-bottom: 28px;
+  font-weight: 800;
+}
+
+#banner .banner-content p {
+  color: #ffffff9d;
+  margin-bottom: 28px;
+}
+
+#banner .banner-btn {
+  display: flex;
+  gap: 10px;
+}
+
+#banner .join {
+  background-color: var(--primary_color);
+}
+
+#banner .download {
+  border: 1px solid var(--white);
+}
+
+#banner .banner-img {
+  position: relative;
+}
+
+#banner .t-one {
+  top: 22%;
+  right: -50px;
+}
+
+#banner .t-two {
+  top: 70%;
+  left: -120px;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 10px;
+  align-items: center;
+}
+
+#banner .tooltip {
+  padding: 16px 24px;
+  border-radius: 12px;
+  background-color: #ffffff75;
+  position: absolute;
+}
+
+#banner .tooltip h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  background: var(--primary_color);
+  border-radius: 50%;
+}
+
+/* responsive media query */
+/* for mobile devices */
+@media screen and (max-width: 576px) {
+  /* common style */
+  .btn {
+    font-size: 1rem;
+    padding:;
+  }
+
+  /* main style */
+  .bar-icon i {
+    font-size: 1.5rem;
+  }
+
+  .header-container nav ul {
+    display: none;
+  }
+
+  .header-container .bar-icon {
+    display: block;
+  }
+
+  #banner {
+    flex-direction: column;
+  }
+
+  #banner .banner-content {
+    padding-left: 20px;
+  }
+
+  #banner .banner-content h1 {
+    font-size: 2.25rem;
+    width: 285px;
+  }
+
+  #banner .tooltip {
+    padding: 12px 18px;
+    border-radius: 12px;
+    font-size: 1rem;
+  }
+
+  #banner .tooltip h2 {
+    font-size: 1.5rem;
+  }
+
+  #banner .t-one {
+    top: 15%;
+    right: -35px;
+  }
+
+  #banner .t-two {
+    top: 45%;
+    left: 0px;
+  }
+
+  .circle {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* for medium devices  */
+@media screen and (min-width: 577px) and (max-width: 992px) {
+  /* banner related style */
+  #banner {
+    flex-direction: column;
+    gap: 100px;
+    align-items: flex-start;
+    padding-left: 60px;
+    padding-top: 75px;
+  }
+
+  #banner .banner-img {
+    margin: 0 auto;
+  }
+}
